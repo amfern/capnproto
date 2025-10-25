@@ -24,8 +24,8 @@
 
 #pragma once
 
-#include "exception.h"
-#include "tuple.h"
+#include <kj/exception.h>
+#include <kj/tuple.h>
 
 KJ_BEGIN_HEADER
 
