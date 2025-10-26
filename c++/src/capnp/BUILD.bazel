@@ -1,5 +1,9 @@
 load("@capnp-cpp//src/capnp:cc_capnp_library.bzl", "cc_capnp_library")
 
+load(":configure.bzl", "capnp_configure")
+
+capnp_configure()
+
 cc_library(
     name = "capnp",
     srcs = [
