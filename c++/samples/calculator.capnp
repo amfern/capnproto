@@ -21,6 +21,12 @@
 
 @0x85150b117366d14b;
 
+using import "/capnp/test-import.capnp".TestImport;
+
+struct TestImportCalc {
+  foo @0 :TestImport;
+}
+
 interface Calculator {
   # A "simple" mathematical calculator, callable via RPC.
   #

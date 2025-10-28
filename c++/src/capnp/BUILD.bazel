@@ -4,6 +4,10 @@ load(":configure.bzl", "capnp_configure")
 
 capnp_configure()
 
+exports_files([
+    "test-import.capnp",
+])
+
 cc_library(
     name = "capnp",
     srcs = [
@@ -208,6 +212,7 @@ cc_capnp_library(
     ],
     include_prefix = "capnp",
     src_prefix = "src",
+    visibility = ["//visibility:public"],
 )
 
 cc_library(

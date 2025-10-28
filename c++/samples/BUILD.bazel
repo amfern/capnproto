@@ -14,12 +14,22 @@ cc_binary(
     deps = [":addressbook_capnp"],
 )
 
+cc_library(
+    name = "capnp_test",
+    deps = ["@capnp-cpp//src/capnp:capnp_test"]
+)
+
 cc_capnp_library(
     name = "calculator_capnp",
     srcs = [
         "calculator.capnp",
     ],
+    deps = [
+        "@capnp-cpp//src/capnp:capnp_test",
+    ],
+    # src_prefix = "src",
     include_prefix = ".",
+
 )
 
 cc_binary(
